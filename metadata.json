@@ -1,0 +1,6 @@
+{
+  "name": "MYMINI",
+  "description": "Your world. Miniaturized. Turn personal photographs into premium, highly detailed custom physical miniatures.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
