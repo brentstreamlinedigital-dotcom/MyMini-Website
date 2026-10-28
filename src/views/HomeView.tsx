@@ -185,12 +185,12 @@ export const HomeView: React.FC<HomeViewProps> = ({
         <CategoryShowcase onSelectCategory={handleCategorySelectFromShowcase} />
       </div>
 
-      {/* [HIDDEN TEMPORARILY] Signature Comparison Slider - re-enable once portfolio items are ready */}
-      {/* 
+      {/* ==================================================
+          4. SIGNATURE COMPARISON SLIDER (ORIGINAL -> MYMINI)
+          ================================================== */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#E9E8E4]/40 border-y border-[#E9E8E4]">
         <ComparisonSlider />
       </section>
-      */}
 
       {/* ==================================================
           5. THE MYMINI PROCESS (Manufacturing Documentary)
