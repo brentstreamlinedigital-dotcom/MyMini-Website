@@ -14,7 +14,7 @@ import {
   ZoomIn,
   Eye
 } from 'lucide-react';
-import { HeroThreeViewer } from '../components/HeroThreeViewer';
+import { Logo } from '../components/Logo';
 import { ComparisonSlider } from '../components/ComparisonSlider';
 import { CategoryShowcase } from '../components/CategoryShowcase';
 import { Configurator } from '../components/Configurator';
@@ -32,7 +32,6 @@ export const HomeView: React.FC<HomeViewProps> = ({
   onAddToCart,
   onSelectGalleryItem,
 }) => {
-  const [activeHeroStage, setActiveHeroStage] = useState<'photo' | 'model' | 'miniature'>('miniature');
   const [configuratorCategory, setConfiguratorCategory] = useState<CategoryType>('cars');
 
   const handleCategorySelectFromShowcase = (catId: string) => {
@@ -108,18 +107,26 @@ export const HomeView: React.FC<HomeViewProps> = ({
             </div>
           </div>
 
-          {/* Right Column: High-Fidelity 3D Interactive Miniature Viewer */}
+          {/* Right Column: Hero Brand Showcase */}
           <div className="lg:col-span-6 relative w-full flex items-center justify-center">
             {/* Soft Ambient Radial Blur */}
-            <div className="absolute -top-10 -left-6 w-80 h-80 bg-[#FF6801] rounded-full blur-[110px] opacity-10 pointer-events-none"></div>
+            <div className="absolute -top-12 -left-8 w-96 h-96 bg-[#FF6801] rounded-full blur-[120px] opacity-20 pointer-events-none"></div>
 
-            <div className="w-full relative mini-shadow">
-              <div className="bg-gradient-to-br from-[#E9E8E4] to-[#D8D7D3] rounded-3xl p-1 shadow-inner">
-                <div className="w-full aspect-square sm:aspect-4/3 lg:aspect-square rounded-[22px] overflow-hidden relative bg-[#111111]">
-                  <HeroThreeViewer
-                    initialStage={activeHeroStage}
-                    onStageChange={(stage) => setActiveHeroStage(stage)}
-                  />
+            <div className="w-full relative mini-shadow max-w-lg lg:max-w-none">
+              <div className="bg-gradient-to-br from-[#E9E8E4] to-[#D8D7D3] rounded-3xl p-1.5 shadow-xl">
+                <div className="w-full aspect-square sm:aspect-4/3 lg:aspect-square rounded-[22px] overflow-hidden relative bg-[#EFECE6] flex flex-col items-center justify-center p-8 sm:p-12 text-center border border-[#DFDDD8] group">
+                  {/* Subtle decorative radial glow behind logo */}
+                  <div className="absolute inset-0 bg-radial from-white/90 via-transparent to-transparent pointer-events-none opacity-80" />
+
+                  <div className="relative z-10 flex flex-col items-center">
+                    <Logo size="hero" variant="orange" className="max-w-full drop-shadow-xl" />
+                    <div className="mt-8 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-[#DFDDD8] shadow-xs">
+                      <span className="w-2 h-2 rounded-full bg-[#FF6801]"></span>
+                      <span className="text-[11px] sm:text-xs uppercase tracking-[0.2em] font-bold text-[#1A1A1A]/80 font-jellee">
+                        Your World. Miniaturized.
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

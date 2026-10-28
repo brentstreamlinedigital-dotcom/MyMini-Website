@@ -2,7 +2,7 @@ import React from 'react';
 
 interface LogoProps {
   className?: string;
-  size?: 'sm' | 'md' | 'lg' | 'xl';
+  size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'hero';
   variant?: 'orange' | 'white' | 'monochrome';
   showTagline?: boolean;
 }
@@ -14,13 +14,15 @@ export const Logo: React.FC<LogoProps> = ({
   showTagline = false,
 }) => {
   const sizeMap = {
-    sm: { width: 110, height: 60, fontSize: 18 },
-    md: { width: 140, height: 76, fontSize: 23 },
-    lg: { width: 180, height: 98, fontSize: 30 },
-    xl: { width: 230, height: 125, fontSize: 38 },
+    sm: { width: 110, height: 60 },
+    md: { width: 140, height: 76 },
+    lg: { width: 180, height: 98 },
+    xl: { width: 230, height: 125 },
+    '2xl': { width: 320, height: 174 },
+    hero: { width: 380, height: 210 },
   };
 
-  const { width, height, fontSize } = sizeMap[size];
+  const { width, height } = sizeMap[size];
 
   const bgColor = variant === 'white' ? '#FFFFFF' : variant === 'monochrome' ? '#111111' : '#FF6801';
   const textColor = variant === 'white' ? '#FF6801' : '#FFFFFF';
@@ -33,7 +35,7 @@ export const Logo: React.FC<LogoProps> = ({
         viewBox="0 0 160 90"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="transition-transform duration-300 ease-out group-hover:scale-[1.03] active:scale-[0.98] drop-shadow-sm"
+        className="transition-transform duration-300 ease-out group-hover:scale-[1.03] active:scale-[0.98] drop-shadow-sm max-w-full h-auto"
         aria-label="MYMINI"
         role="img"
       >
@@ -56,7 +58,7 @@ export const Logo: React.FC<LogoProps> = ({
           className="transition-colors duration-200"
         />
 
-        {/* Brand typographic wordmark "MyMini" */}
+        {/* Brand typographic wordmark "MyMini" - constant coordinate-system size 23 matching viewBox */}
         <text
           x="75"
           y="54"
@@ -64,7 +66,7 @@ export const Logo: React.FC<LogoProps> = ({
           fill={textColor}
           fontFamily="'Fredoka', 'Jellee', -apple-system, system-ui, sans-serif"
           fontWeight="700"
-          fontSize={fontSize}
+          fontSize="23"
           letterSpacing="-0.02em"
           style={{ userSelect: 'none' }}
         >
