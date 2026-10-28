@@ -185,12 +185,12 @@ export const HomeView: React.FC<HomeViewProps> = ({
         <CategoryShowcase onSelectCategory={handleCategorySelectFromShowcase} />
       </div>
 
-      {/* ==================================================
-          4. SIGNATURE COMPARISON SLIDER (ORIGINAL -> MYMINI)
-          ================================================== */}
+      {/* [HIDDEN TEMPORARILY] Signature Comparison Slider - re-enable once portfolio items are ready */}
+      {/* 
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#E9E8E4]/40 border-y border-[#E9E8E4]">
         <ComparisonSlider />
       </section>
+      */}
 
       {/* ==================================================
           5. THE MYMINI PROCESS (Manufacturing Documentary)
@@ -284,9 +284,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
       </section>
 
-      {/* ==================================================
-          6. DETAIL & CRAFTSMANSHIP ("Every detail matters")
-          ================================================== */}
+      {/* [HIDDEN TEMPORARILY] Detail & Craftsmanship ("Every detail matters") - re-enable once portfolio items are ready */}
+      {/*
       <section className="py-24 bg-[#111111] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
@@ -354,6 +353,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </div>
         </div>
       </section>
+      */}
 
       {/* ==================================================
           7. CREATE MY MINI (The Core Configurator)
