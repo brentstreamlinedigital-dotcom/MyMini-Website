@@ -24,7 +24,7 @@ export const HowItWorksView: React.FC<HowItWorksViewProps> = ({ onNavigateToCrea
       title: 'Digital 3D Sculpting & Proof Approval',
       subtitle: 'Zero Guesswork • 360° Digital Proof',
       description: 'Senior digital sculptors reconstruct the physical asset polygon by polygon. We recreate wheel spoke angles, brake caliper stampings, window bevels, brick mortars, and facial expressions. Before any physical resin is cured, you receive a private, interactive 3D link to inspect every millimeter on your phone or laptop.',
-      image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=80',
+      image: '/assets/how-it-works/step-02-sculpting.jpg',
       bullets: [
         'Inspect the digital model from any rotation angle',
         'Unlimited revisions until you are 100% delighted',
@@ -36,7 +36,7 @@ export const HowItWorksView: React.FC<HowItWorksViewProps> = ({ onNavigateToCrea
       title: '8K SLA Photopolymer Printing',
       subtitle: '22-Micron Layer Resolution • Aerospace Resin',
       description: 'Once approved, the file is sliced and fed into industrial 8K stereolithography 3D printers using specialized engineering photopolymers. With 22-micron layer height, the resulting surface is completely free of visible layer lines, offering the smooth density of cast porcelain.',
-      image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=900&q=80',
+      image: '/assets/how-it-works/step-03-printing.jpg',
       bullets: [
         'Microscopic tolerances within ±0.02mm',
         'Zero stepped ridges or filament lines',
@@ -48,7 +48,7 @@ export const HowItWorksView: React.FC<HowItWorksViewProps> = ({ onNavigateToCrea
       title: 'Master Finishing & Vault Delivery',
       subtitle: 'Micro-Airbrushing • Solid American Walnut Base',
       description: 'Our miniature artists apply automotive-grade paint formulas matched to factory color codes or realistic patina. The finished piece is mounted onto a hand-milled solid American Walnut plinth, fitted with a laser-engraved brushed brass plaque, and packed into a custom-molded high-density foam travel vault.',
-      image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=900&q=80',
+      image: '/assets/how-it-works/step-04-delivery.jpg',
       bullets: [
         'Multi-stage UV-resistant protective clear-coat',
         'Solid walnut plinth with brass personalization plate',
